@@ -14,6 +14,7 @@
 <link rel="canonical" href="https://saviold.github.io/Oberland/" />
 <link rel="icon" type="image/png" href="bilder/favicon.png" />
 <link rel="apple-touch-icon" href="bilder/favicon.png" />
+<link rel="preload" as="image" href="bilder/web/hero-waldhaus.jpg" />
 
 <meta property="og:type" content="website" />
 <meta property="og:locale" content="de_DE" />
@@ -21,6 +22,7 @@
 <meta property="og:title" content="Verfahrensmechaniker (m/w/d) bei Oberland MV in Bad Wurzach" />
 <meta property="og:description" content="Kunststoff- und Kautschuktechnologie, Fachrichtung Formteile. Vollzeit, 30 Tage Urlaub, sicherer Arbeitsplatz. Jetzt in unter 60 Sekunden bewerben." />
 <meta property="og:url" content="https://saviold.github.io/Oberland/" />
+<meta property="og:image" content="https://saviold.github.io/Oberland/creatives/oberland-stelle-4x5.png" />
 
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -47,29 +49,35 @@
 
 <style>
 /* =======================================================================
-   CI OBERLAND MV – alle Werte direkt von oberlandmv.com übernommen:
-   --accent:#225d39 (Hausgrün), #17462a (dunkles Grün der Benefit-Fläche),
-   --yellow:#FFCD20 (Akzent), Schrift "Maven Pro", Ecken 0 / R / 0 / R.
+   CI OBERLAND MV – Farbcodex laut Styleguide:
+     Grün   Pantone 7483 · #225d39  (Hauptfarbe)
+     Silber Pantone 877  · #898c8e  (zweite Logofarbe "MV")
+     Weiß                · #ffffff
+     Schwarz             · #1d1d1b  (Text)
+   Dunklere Grüntöne sind Abstufungen des Hausgrüns (Flächen der Website).
+   Schrift: Arial (Styleguide) für Fließtext, Maven Pro (Website, Plakate,
+   Logo-Anmutung) für Überschriften. Ecken 0 / R / 0 / R wie auf der Website.
    ======================================================================= */
 :root{
   --bg:#ffffff;
-  --bg-soft:#f2f6f3;
-  --panel-2:#e3ece6;
+  --bg-soft:#f3f5f4;
+  --panel-2:#e2e7e4;
   --line:rgba(34,93,57,.16);
   --line-strong:rgba(34,93,57,.32);
-  --ink:#16321f;
-  --ink-soft:#3d5646;
-  --ink-mute:#6a7f71;
-  --brand-900:#0d371f;   /* tiefstes Grün (Hintergrund-Logo der Website) */
-  --brand-800:#17462a;   /* dunkles Grün (Benefit-Fläche der Website)    */
-  --brand:#225d39;       /* Hausgrün (--accent der Website)              */
+  --ink:#1d1d1b;         /* Schwarz laut Styleguide */
+  --ink-soft:#3e403f;
+  --ink-mute:#65686a;    /* abgedunkeltes Silber – für kleine Texte lesbar */
+  --silver:#898c8e;      /* Silber laut Styleguide */
+  --silver-soft:#eceded;
+  --silver-light:#c9cbcc;
+  --brand-900:#0d371f;   /* Abstufung Hausgrün (Hintergrund-Logo der Website) */
+  --brand-800:#17462a;   /* Abstufung Hausgrün (Benefit-Fläche der Website)   */
+  --brand:#225d39;       /* Grün laut Styleguide                              */
   --brand-dark:#1b4c2f;
   --brand-soft:#e6efe9;
-  --yellow:#ffcd20;      /* Akzent (--yellow der Website)                */
-  --yellow-dark:#f2bd00;
   --grad:linear-gradient(125deg,#0d371f 0%,#17462a 45%,#225d39 100%);
-  --f-display:"Maven Pro",system-ui,sans-serif;
-  --f-body:"Maven Pro",system-ui,sans-serif;
+  --f-display:"Maven Pro",Arial,sans-serif;
+  --f-body:Arial,"Liberation Sans",Helvetica,sans-serif;
   --radius:22px;
   --corner:0 var(--radius) 0 var(--radius);  /* Eckform der Website */
   --shadow:0 18px 50px rgba(13,55,31,.14);
@@ -80,31 +88,31 @@
 *{margin:0;padding:0;box-sizing:border-box}
 html{scroll-behavior:smooth}
 body{font-family:var(--f-body);background:var(--bg);color:var(--ink);line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:hidden;-webkit-text-size-adjust:100%;text-size-adjust:100%}
-::selection{background:var(--yellow);color:var(--brand-900)}
+::selection{background:var(--brand);color:#fff}
 button,a,label,input{-webkit-tap-highlight-color:rgba(34,93,57,.16)}
 .shell{max-width:1160px;margin:0 auto;padding:0 24px}
-h1,h2,h3{font-family:var(--f-display);font-weight:800;line-height:1.15;letter-spacing:-.005em;color:var(--brand-900)}
+h1,h2,h3{font-family:var(--f-display);font-weight:800;line-height:1.15;letter-spacing:-.005em;color:var(--brand)}
 a{color:inherit;text-decoration:none}
 img{max-width:100%;display:block}
 
 /* ---------- topbar ---------- */
-.topbar{position:fixed;inset:0 0 auto 0;z-index:50;background:rgba(34,93,57,.96);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-bottom:1px solid rgba(255,255,255,.12)}
+.topbar{position:fixed;inset:0 0 auto 0;z-index:50;background:#fff;border-bottom:1px solid var(--line);box-shadow:0 2px 14px rgba(13,55,31,.06)}
 .topbar__inner{display:flex;align-items:center;justify-content:space-between;height:68px}
 .brand{display:flex;align-items:center}
-.brand__logo{display:none;height:44px;width:auto}
+.brand__logo{display:none;height:52px;width:auto}
 .brand__fallback{display:flex;flex-direction:column;line-height:1.02}
-.brand__name{font-family:var(--f-display);font-weight:600;font-size:24px;color:#fff}
-.brand__sub{font-weight:600;font-size:9px;letter-spacing:.14em;text-transform:uppercase;color:rgba(255,255,255,.75)}
-.topbar__nav{display:flex;align-items:center;gap:26px;font-size:15px;font-weight:600;color:rgba(255,255,255,.88)}
-.topbar__nav a.navlink:hover{color:var(--yellow)}
+.brand__name{font-family:var(--f-display);font-weight:600;font-size:24px;color:var(--brand)}
+.brand__sub{font-weight:600;font-size:9px;letter-spacing:.14em;text-transform:uppercase;color:var(--silver)}
+.topbar__nav{display:flex;align-items:center;gap:26px;font-size:15px;font-weight:700;color:var(--ink-soft)}
+.topbar__nav a.navlink:hover{color:var(--brand)}
 .btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;font-family:var(--f-display);font-weight:700;font-size:16px;padding:14px 28px;border-radius:999px;border:none;cursor:pointer;transition:transform .18s ease,box-shadow .18s ease,background .18s ease,color .18s ease;white-space:nowrap}
 .btn svg{width:18px;height:18px;stroke:currentColor;flex:0 0 auto}
 .btn--primary{background:var(--brand);color:#fff;box-shadow:0 8px 22px rgba(34,93,57,.28)}
 .btn--primary:hover{background:var(--brand-dark);transform:translateY(-2px);box-shadow:0 14px 30px rgba(34,93,57,.36)}
-.btn--accent{background:var(--yellow);color:var(--brand-900);box-shadow:0 8px 24px rgba(0,0,0,.22)}
-.btn--accent:hover{background:#fff;transform:translateY(-2px)}
+.btn--accent{background:#fff;color:var(--brand);box-shadow:0 8px 24px rgba(0,0,0,.22)}
+.btn--accent:hover{background:var(--silver-soft);transform:translateY(-2px)}
 .btn--white{background:#fff;color:var(--brand)}
-.btn--white:hover{background:var(--yellow);color:var(--brand-900)}
+.btn--white:hover{background:var(--silver-soft)}
 .btn--outline{background:transparent;color:#fff;border:1.5px solid rgba(255,255,255,.7)}
 .btn--outline:hover{border-color:#fff;background:rgba(255,255,255,.1)}
 .btn--sm{padding:10px 20px;font-size:14.5px}
@@ -115,8 +123,9 @@ img{max-width:100%;display:block}
 .hero{position:relative;overflow:hidden;background:var(--brand-900)}
 .hero__media{position:absolute;inset:0;background-color:var(--brand-900);background-image:var(--grad);background-size:cover;background-position:center}
 .hero__media.is-ci{background-position:right -6vw center;background-size:auto 128%}
+.hero__media.is-foto{background-position:right center;background-size:cover}
 .hero__media::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(13,55,31,.35),transparent 60%)}
-.hero__inner{position:relative;display:flex;min-height:600px}
+.hero__inner{position:relative;z-index:1;display:flex;min-height:600px}  /* z-index: Panel-Overlay liegt über dem Foto */
 .hero__panel{position:relative;flex:0 0 58%;max-width:680px;display:flex;flex-direction:column;justify-content:center;padding:150px 48px 60px 0;color:#fff}
 .hero__panel>*{text-shadow:0 1px 14px rgba(5,30,16,.45)}
 .hero__cta .btn{text-shadow:none}
@@ -125,17 +134,17 @@ img{max-width:100%;display:block}
 .hero__logo img{display:none;height:72px;width:auto}
 .hero__logo .brand__fallback b{font-family:var(--f-display);font-weight:600;font-size:36px;color:#fff;line-height:1}
 .hero__logo .brand__fallback span{display:block;font-size:10px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:rgba(255,255,255,.8);margin-top:5px}
-.hero__eyebrow{display:inline-flex;align-items:center;gap:10px;font-size:13.5px;font-weight:800;letter-spacing:.08em;text-transform:uppercase;color:var(--yellow);margin-bottom:16px}
-.hero__eyebrow .dot{width:8px;height:8px;border-radius:50%;background:var(--yellow);box-shadow:0 0 0 4px rgba(255,205,32,.25);flex:0 0 auto}
+.hero__eyebrow{display:inline-flex;align-items:center;gap:10px;font-family:var(--f-display);font-size:14px;font-weight:800;letter-spacing:.08em;text-transform:uppercase;color:#fff;margin-bottom:16px}
+.hero__eyebrow .dot{width:9px;height:9px;border-radius:50%;background:var(--silver-light);box-shadow:0 0 0 4px rgba(201,203,204,.28);flex:0 0 auto}
 .hero h1{color:#fff;font-size:clamp(30px,4.2vw,48px);font-weight:800;line-height:1.08;hyphens:manual}
 .hero h1 .h1-sub{display:block;font-size:.6em;font-weight:600;line-height:1.2;margin-top:8px;color:#e9f2ec}
-.hero h1 .h1-fr{display:inline-block;margin-top:12px;font-size:clamp(12px,.36em,17px);font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--brand-900);background:var(--yellow);padding:5px 12px;border-radius:0 9px 0 9px;text-shadow:none;line-height:1.3}
-.hero__sub{margin-top:16px;font-size:18px;font-weight:500;color:#e2eee6;max-width:500px}
+.hero h1 .h1-fr{display:inline-block;margin-top:12px;font-size:clamp(12px,.36em,17px);font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--brand);background:#fff;padding:5px 12px;border-radius:0 9px 0 9px;text-shadow:none;line-height:1.3}
+.hero__sub{margin-top:16px;font-size:18px;font-weight:400;color:#e8efea;max-width:500px}
 .hero__sub b{color:#fff;font-weight:700}
 .hero__cta{margin-top:28px;display:flex;gap:14px;flex-wrap:wrap}
 .hero__reassure{margin-top:18px;display:flex;flex-wrap:wrap;gap:8px 18px;font-size:13.5px;font-weight:600;color:#d3e6da}
 .hero__reassure span{display:inline-flex;align-items:center;gap:7px}
-.hero__reassure svg{width:16px;height:16px;stroke:var(--yellow)}
+.hero__reassure svg{width:16px;height:16px;stroke:#fff}
 @media(max-width:820px){
   .hero__inner{min-height:0}
   .hero__panel{flex:1 1 100%;max-width:none;padding:92px 0 40px}
@@ -171,7 +180,7 @@ section[id],.form-card{scroll-margin-top:84px}
 .job h3 small{display:block;font-size:15px;font-weight:600;color:var(--ink-soft);margin-top:4px}
 .job__meta{display:flex;gap:7px;flex-wrap:wrap;margin-top:12px}
 .tag{font-size:12px;font-weight:700;color:var(--brand);background:var(--brand-soft);border:1px solid var(--line);padding:5px 11px;border-radius:999px}
-.tag--yellow{background:#fff6d6;border-color:rgba(242,189,0,.45);color:#5c4700}
+.tag--silver{background:var(--silver-soft);border-color:rgba(137,140,142,.45);color:#4a4d4f}
 .job__cols{display:grid;grid-template-columns:1.05fr 1fr;gap:34px}
 .job h4{font-size:12.5px;font-weight:800;letter-spacing:.06em;text-transform:uppercase;color:var(--ink-mute);margin-bottom:10px}
 .job ul{list-style:none;display:grid;gap:9px;margin-bottom:24px;font-size:14.5px;color:var(--ink-soft);font-weight:500}
@@ -184,9 +193,33 @@ section[id],.form-card{scroll-margin-top:84px}
 .job__link{font-size:14px;font-weight:600;color:var(--brand);text-decoration:underline;text-underline-offset:3px}
 .job__link:hover{color:var(--brand-dark)}
 @media(max-width:860px){.job__cols{grid-template-columns:1fr;gap:0}}
+.produkt{position:relative;margin-top:36px;border-radius:var(--corner);overflow:hidden;background:var(--brand-900)}
+.produkt img{width:100%;height:auto;aspect-ratio:2560/1040;object-fit:cover}
+.produkt figcaption{position:absolute;left:0;bottom:0;max-width:560px;background:rgba(13,55,31,.92);color:#fff;padding:16px 24px;border-radius:0 var(--radius) 0 0;font-size:15px;line-height:1.45}
+.produkt figcaption b{display:block;font-family:var(--f-display);font-size:18px;font-weight:700;margin-bottom:2px}
+@media(max-width:760px){.produkt{margin-top:26px}.produkt figcaption{position:static;max-width:none;border-radius:0;padding:14px 16px;font-size:14px}.produkt figcaption b{font-size:16px}}
 
 /* ---------- benefits ---------- */
-.benefit-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:44px}
+.about{display:grid;grid-template-columns:1.08fr .92fr;gap:48px;align-items:center}
+.about__text p.about__lead{margin-top:18px;font-size:19px;line-height:1.6;color:var(--ink)}
+.about__text p.about__lead b{color:var(--brand)}
+.about__text p.about__more{margin-top:14px;font-size:16px;color:var(--ink-soft)}
+.facts{display:grid;grid-template-columns:repeat(3,1fr);gap:0;margin-top:28px;border-top:2px solid var(--brand);border-bottom:1px solid var(--line)}
+.fact{padding:16px 14px 16px 0}
+.fact+.fact{padding-left:16px;border-left:1px solid var(--line)}
+.fact b{display:block;font-family:var(--f-display);font-size:26px;font-weight:800;color:var(--brand);line-height:1.1}
+.fact span{display:block;margin-top:4px;font-size:13px;color:var(--ink-mute);line-height:1.35}
+.award{position:relative;border-radius:var(--corner);overflow:hidden;box-shadow:var(--shadow)}
+.award img{width:100%;height:auto;aspect-ratio:2637/1758;object-fit:cover}
+.award figcaption{display:flex;align-items:center;gap:12px;background:var(--brand);color:#fff;padding:14px 20px;font-size:14px;line-height:1.4}
+.award figcaption svg{width:26px;height:26px;stroke:#fff;flex:0 0 auto}
+.award figcaption b{font-family:var(--f-display);font-weight:700}
+.benefits-head{margin-top:72px;display:flex;align-items:flex-end;justify-content:space-between;gap:20px;flex-wrap:wrap}
+.benefits-head h3{font-size:clamp(24px,3vw,32px)}
+.benefits-head p{color:var(--ink-mute);font-size:15px}
+@media(max-width:920px){.about{grid-template-columns:1fr;gap:30px}}
+@media(max-width:760px){.about__text p.about__lead{font-size:17px}.fact b{font-size:21px}.fact span{font-size:12px}.fact{padding-right:8px}.fact+.fact{padding-left:10px}.benefits-head{margin-top:52px}}
+.benefit-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:30px}
 @media(max-width:920px){.benefit-grid{grid-template-columns:repeat(2,1fr)}}
 @media(max-width:560px){.benefit-grid{grid-template-columns:1fr}}
 .benefit{background:#fff;border:1.5px solid var(--line);border-radius:var(--corner);padding:26px 24px}
@@ -204,12 +237,21 @@ section[id],.form-card{scroll-margin-top:84px}
 .step b{font-family:var(--f-display);font-weight:700;font-size:18px;display:block;margin-bottom:8px;color:var(--brand-900)}
 .step p{font-size:14.5px;color:var(--ink-soft);font-weight:500}
 
-/* ---------- mid CTA ---------- */
-.midcta{position:relative;overflow:hidden;background:var(--brand-900)}
-.midcta::before{content:"";position:absolute;inset:0;background:var(--grad);opacity:.97}
-.midcta__in{position:relative;display:flex;align-items:center;justify-content:space-between;gap:24px;flex-wrap:wrap;padding:46px 0}
-.midcta h2{color:#fff;font-size:clamp(24px,3.4vw,34px);max-width:640px;text-transform:uppercase;letter-spacing:.01em}
-.midcta p{color:#dbe9df;font-weight:500;margin-top:6px;font-size:17px}
+/* ---------- mid CTA · Banner-Look der Kampagne: Silber | Kasten | Grün ---------- */
+.midcta{position:relative;overflow:hidden;background:linear-gradient(90deg,var(--silver) 0 50%,var(--brand) 50% 100%)}
+.midcta__in{position:relative;display:grid;grid-template-columns:1fr auto 1fr;align-items:center;min-height:270px}
+.midcta__l{padding:36px 34px 36px 0;text-align:right}
+.midcta__r{padding:36px 0 36px 34px}
+.midcta__img{width:470px;height:270px;background:url('bilder/web/kasten-split.jpg') center/cover no-repeat}
+.midcta h2{color:#fff;font-size:clamp(22px,2.2vw,30px);text-transform:uppercase;letter-spacing:.01em;line-height:1.12}
+.midcta p{color:#fff;font-family:var(--f-display);font-weight:500;font-size:clamp(17px,1.65vw,22px);text-transform:uppercase;line-height:1.2;margin-bottom:18px}
+@media(max-width:980px){
+  .midcta{background:var(--brand)}
+  .midcta__in{grid-template-columns:1fr;min-height:0}
+  .midcta__l{background:var(--silver);text-align:center;padding:30px 16px 26px;margin:0 -16px}
+  .midcta__img{width:auto;height:0;padding-bottom:55.6%;margin:0 -16px;background-size:cover}
+  .midcta__r{text-align:center;padding:26px 0 34px}
+}
 
 /* ---------- form ---------- */
 .apply{position:relative;background:var(--bg-soft);border-top:1px solid var(--line)}
@@ -237,15 +279,15 @@ section[id],.form-card{scroll-margin-top:84px}
 .choice{position:relative;display:flex;align-items:center;gap:13px;background:#fff;border:1.5px solid var(--line-strong);border-radius:0 12px 0 12px;padding:13px 15px;cursor:pointer;transition:border-color .15s ease,background .15s ease,transform .15s ease;font-size:15.5px;font-weight:600;color:var(--ink);box-shadow:0 1px 3px rgba(13,55,31,.05);line-height:1.3;min-height:56px}
 .choice:hover{border-color:var(--brand);transform:translateY(-1px)}
 .choice input{position:absolute;opacity:0;pointer-events:none}
-.choice .key{flex:0 0 28px;height:28px;display:grid;place-items:center;font-family:var(--f-display);font-weight:800;font-size:13px;background:var(--brand-800);border-radius:0 7px 0 7px;color:#fff}
+.choice .key{flex:0 0 28px;height:28px;display:grid;place-items:center;font-family:var(--f-display);font-weight:800;font-size:13px;background:var(--silver);border-radius:0 7px 0 7px;color:#fff}
 .choice.is-selected{border-color:var(--brand);background:var(--brand-soft)}
-.choice.is-selected .key{background:var(--yellow);color:var(--brand-900)}
+.choice.is-selected .key{background:var(--brand);color:#fff}
 .choice small{display:block;font-weight:500;font-size:12.5px;color:var(--ink-mute);margin-top:2px;line-height:1.35}
 .field{margin-bottom:14px}
 .field label{display:block;font-size:13.5px;font-weight:700;margin-bottom:6px;color:var(--brand-900)}
 .field input{width:100%;padding:13px 15px;font-size:16px;font-family:var(--f-body);font-weight:500;background:#fff;border:1.5px solid var(--line-strong);border-radius:10px;color:var(--ink);outline:none;transition:border-color .15s ease,box-shadow .15s ease}
 .field input::placeholder{color:var(--ink-mute);font-weight:400}
-.field input:focus{border-color:var(--brand);box-shadow:0 0 0 3px rgba(255,205,32,.35)}
+.field input:focus{border-color:var(--brand);box-shadow:0 0 0 3px rgba(34,93,57,.16)}
 .field input.is-invalid{border-color:#d84444}
 .frow{display:grid;grid-template-columns:1fr 1fr;gap:12px}
 .consent{font-size:12px;color:var(--ink-soft);font-weight:500;margin:6px 0 2px;line-height:1.5}
@@ -283,10 +325,10 @@ footer{padding:54px 0 36px;background:var(--brand);color:#e4efe8}
 .footer__col p{font-size:14px;color:#cfe1d5;margin-top:12px;max-width:330px;font-weight:500}
 .footer__col b{font-family:var(--f-display);font-weight:700;font-size:15px;color:#fff}
 .footer__col ul{list-style:none;margin-top:12px;display:grid;gap:8px;font-size:14px;color:#cfe1d5;font-weight:500}
-.footer__col a:hover{color:var(--yellow)}
+.footer__col a:hover{color:#fff;text-decoration:underline}
 .footer__legal{margin-top:42px;padding-top:22px;border-top:1px solid rgba(255,255,255,.18);display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;font-size:12.5px;color:#b5cfbe;font-weight:500}
 .footer__legal a{color:#dbe9df}
-.footer__legal a:hover{color:var(--yellow)}
+.footer__legal a:hover{color:#fff}
 
 /* ---------- reveal ---------- */
 .reveal{opacity:0;transform:translateY(24px);transition:opacity .6s ease,transform .6s ease}
@@ -331,7 +373,6 @@ footer{padding:54px 0 36px;background:var(--brand);color:#e4efe8}
   .job h3 small{font-size:14px}
   .job__foot .btn{width:100%}
   .job__foot{justify-content:center;gap:14px}
-  .midcta__in{padding:36px 0;gap:18px}
   .midcta .btn{width:100%}
   .form-card{margin-top:26px}
   /* WICHTIG: min-height bleibt auch mobil gesetzt (keine Sprünge). */
@@ -372,14 +413,14 @@ footer{padding:54px 0 36px;background:var(--brand);color:#e4efe8}
       <img class="brand__logo" id="logoHeader" alt="Oberland M &amp; V GmbH" />
       <span class="brand__fallback">
         <span class="brand__name">OberlandMV</span>
-        <span class="brand__sub">natürlich geht's</span>
+        <span class="brand__sub">Natürlich geht’s!</span>
       </span>
     </a>
     <nav class="topbar__nav" aria-label="Hauptnavigation">
       <a class="navlink" href="#stelle">Die Stelle</a>
-      <a class="navlink" href="#benefits">Warum Oberland MV</a>
+      <a class="navlink" href="#benefits">Über uns</a>
       <a class="navlink" href="#ablauf">Ablauf</a>
-      <a class="btn btn--white btn--sm" href="#bewerbung"><span class="cta-long">Jetzt bewerben</span><span class="cta-short">Bewerben</span></a>
+      <a class="btn btn--primary btn--sm" href="#bewerbung"><span class="cta-long">Jetzt bewerben</span><span class="cta-short">Bewerben</span></a>
     </nav>
   </div>
 </header>
@@ -397,7 +438,7 @@ footer{padding:54px 0 36px;background:var(--brand);color:#e4efe8}
       <div class="hero__panel">
         <div class="hero__logo">
           <img id="logoHero" alt="Oberland M &amp; V GmbH" />
-          <span class="brand__fallback"><b>OberlandMV</b><span>natürlich geht's</span></span>
+          <span class="brand__fallback"><b>OberlandMV</b><span>Natürlich geht’s!</span></span>
         </div>
         <span class="hero__eyebrow"><span class="dot"></span>Hast du was auf dem Kasten?</span>
         <h1 id="heroTitle">Verfahrens&shy;mechaniker (m/w/d) <span class="h1-sub">für Kunststoff- und Kautschuk&shy;technologie</span><span class="h1-fr">Fachrichtung Formteile</span></h1>
@@ -422,7 +463,7 @@ footer{padding:54px 0 36px;background:var(--brand);color:#e4efe8}
 <div class="trust">
   <div class="shell">
     <div class="trust__grid">
-      <div class="trust__item"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12a9 9 0 0 1-15.5 6.2"/><path d="M3 12a9 9 0 0 1 15.5-6.2"/><path d="M18.5 2.5v3.7h-3.7"/><path d="M5.5 21.5v-3.7h3.7"/></svg><div><b>Marktführer im Mehrweg</b><span>Getränkekästen für ganz Europa</span></div></div>
+      <div class="trust__item"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12a9 9 0 0 1-15.5 6.2"/><path d="M3 12a9 9 0 0 1 15.5-6.2"/><path d="M18.5 2.5v3.7h-3.7"/><path d="M5.5 21.5v-3.7h3.7"/></svg><div><b>Führend im Mehrweg</b><span>Getränkekästen für ganz Europa</span></div></div>
       <div class="trust__item"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10"/><path d="m9 12 2 2 4-4"/></svg><div><b>Sicherer Arbeitsplatz</b><span>in einer zukunftssicheren Branche</span></div></div>
       <div class="trust__item"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/><path d="m9 16 2 2 4-4"/></svg><div><b>30 Tage Urlaub</b><span>plus flexible Arbeitszeiten</span></div></div>
       <div class="trust__item"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="6"/><path d="M15.5 13.2 17 22l-5-3-5 3 1.5-8.8"/></svg><div><b>Ausgezeichnet</b><span>Deutscher Verpackungspreis &amp; World Star</span></div></div>
@@ -437,12 +478,17 @@ footer{padding:54px 0 36px;background:var(--brand);color:#e4efe8}
     <h2 class="sec-title">Dein Fachwissen.<br />Unsere Spritzgussanlagen.</h2>
     <p class="sec-lead">Bei uns entstehen langlebige Mehrweg-Getränkekästen für Brauereien und Getränkehersteller in ganz Europa – auf modernen Anlagen mit Robotik, IML und GID. Vollzeit im 3-Schicht-System am Standort Bad Wurzach im Allgäu.</p>
 
+    <figure class="produkt reveal">
+      <img src="bilder/web/produktbeispiel.jpg" width="1800" height="731" loading="lazy" alt="Zwei Mehrweg-Getränkekästen von Oberland MV" />
+      <figcaption><b>Das entsteht an deinen Anlagen.</b>Langlebige Mehrweg-Getränkekästen – im Spritzguss gefertigt, für Brauereien und Getränkehersteller in ganz Europa.</figcaption>
+    </figure>
+
     <article class="job reveal">
       <div class="job__head">
         <div class="job__icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 15a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 1 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06A1.65 1.65 0 0 0 4.68 15a1.65 1.65 0 0 0-1.51-1H3a2 2 0 1 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06A1.65 1.65 0 0 0 9 4.68a1.65 1.65 0 0 0 1-1.51V3a2 2 0 1 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06A1.65 1.65 0 0 0 19.4 9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 1 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg></div>
         <div>
           <h3>Verfahrens&shy;mechaniker (m/w/d) <small>für Kunststoff- und Kautschuktechnologie · Fachrichtung Formteile</small></h3>
-          <div class="job__meta"><span class="tag">Vollzeit</span><span class="tag">3-Schicht-System</span><span class="tag">Bad Wurzach</span><span class="tag tag--yellow">30 Tage Urlaub</span></div>
+          <div class="job__meta"><span class="tag">Vollzeit</span><span class="tag">3-Schicht-System</span><span class="tag">Bad Wurzach</span><span class="tag tag--silver">30 Tage Urlaub</span></div>
         </div>
       </div>
 
@@ -495,9 +541,28 @@ footer{padding:54px 0 36px;background:var(--brand);color:#e4efe8}
 <!-- ============ BENEFITS ============ -->
 <section id="benefits">
   <div class="shell">
-    <span class="kicker">Warum Oberland MV</span>
-    <h2 class="sec-title">Der Mehrweg für deine Karriere.</h2>
-    <p class="sec-lead">Innovative und langlebige Mehrweglösungen haben uns zum führenden Verpackungshersteller der europäischen Getränkebranche gemacht – seit fast 60&nbsp;Jahren und ausgezeichnet mit dem Deutschen Verpackungspreis. Dahinter steht ein offenes, vielfältiges Team.</p>
+    <div class="about">
+      <div class="about__text">
+        <span class="kicker">Das sind wir</span>
+        <h2 class="sec-title">Oberland MV –<br />Natürlich geht’s!</h2>
+        <p class="about__lead"><b>Innovative und langlebige Mehrweglösungen</b> haben Oberland MV zum <b>führenden Verpackungshersteller in der europaweiten Getränkebranche</b> gemacht. Der Deutsche Verpackungspreis und der World Star Packaging Award zeugen von unserem hohen Qualitätsanspruch – seit fast 60&nbsp;Jahren.</p>
+        <p class="about__more">Unsere Kunden erhalten Systemlösungen von der Entwicklung über die Fertigung bis zum Recycling. Das Engagement unseres offenen und vielfältigen Teams sorgt dafür, dass wir sie auch in Zukunft mit neuartigen Ideen und exzellenten Leistungen begeistern.</p>
+        <div class="facts">
+          <div class="fact"><b>Fast 60</b><span>Jahre Qualitätsanspruch</span></div>
+          <div class="fact"><b>Führend</b><span>im Mehrweg für Europas Getränkebranche</span></div>
+          <div class="fact"><b>Preisgekrönt</b><span>Deutscher Verpackungspreis &amp; World Star</span></div>
+        </div>
+      </div>
+      <figure class="award reveal">
+        <img src="bilder/web/auszeichnung.jpg" width="1300" height="867" loading="lazy" alt="Mehrweg-Getränkekasten von Oberland MV, ausgezeichnet mit dem Deutschen Verpackungspreis" />
+        <figcaption><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="6"/><path d="M15.5 13.2 17 22l-5-3-5 3 1.5-8.8"/></svg><span><b>Ausgezeichnet in Form und Design:</b> Deutscher Verpackungspreis &amp; World Star Packaging Award</span></figcaption>
+      </figure>
+    </div>
+
+    <div class="benefits-head">
+      <h3>Der Mehrweg für deine Karriere.</h3>
+      <p>Das bieten wir dir – zusätzlich zu 30 Tagen Urlaub.</p>
+    </div>
     <div class="benefit-grid">
       <div class="benefit reveal"><div class="benefit__ic"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="12" cy="5" rx="8" ry="3"/><path d="M4 5v6c0 1.66 3.58 3 8 3s8-1.34 8-3V5"/><path d="M4 11v6c0 1.66 3.58 3 8 3s8-1.34 8-3v-6"/></svg></div><b>Heute vorsorgen, morgen profitieren</b><p>Wir unterstützen dich beim Vermögensaufbau – mit vermögenswirksamen Leistungen (VWL) und betrieblicher Altersvorsorge (bAV).</p></div>
       <div class="benefit reveal"><div class="benefit__ic"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="m3 17 6-6 4 4 8-8"/><path d="M17 7h4v4"/></svg></div><b>Fort- und Weiterbildung</b><p>Vorbereitet für eine gemeinsame Zukunft: Individuelle Weiterbildungen halten dich bei neuen Verfahren und Technologien vorne.</p></div>
@@ -522,17 +587,18 @@ footer{padding:54px 0 36px;background:var(--brand);color:#e4efe8}
   </div>
 </section>
 
-<!-- ============ MID CTA ============ -->
+<!-- ============ MID CTA · Kampagnen-Banner (Silber | Kasten | Grün) ============ -->
 <div class="midcta">
   <div class="shell">
     <div class="midcta__in">
-      <div>
-        <h2>Hast du was auf dem Kasten?</h2>
-        <p>Dann starte mit uns in die Zukunft – deine Bewerbung dauert keine 60 Sekunden.</p>
+      <div class="midcta__l"><h2>Hast du was<br />auf dem Kasten?</h2></div>
+      <div class="midcta__img" role="img" aria-label="Mehrweg-Getränkekasten von Oberland MV"></div>
+      <div class="midcta__r">
+        <p>Dann starte mit uns<br />in die Zukunft!</p>
+        <a class="btn btn--accent" href="#bewerbung">Jetzt bewerben
+          <svg viewBox="0 0 24 24" fill="none" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+        </a>
       </div>
-      <a class="btn btn--accent" href="#bewerbung">Jetzt bewerben
-        <svg viewBox="0 0 24 24" fill="none" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
-      </a>
     </div>
   </div>
 </div>
@@ -664,7 +730,7 @@ footer{padding:54px 0 36px;background:var(--brand);color:#e4efe8}
       <details><summary>Was bedeuten IML und GID?</summary><div class="faq__a">IML steht für In-Mould-Labeling: Das Etikett bzw. Dekor wird direkt beim Spritzgießen mit dem Kasten verbunden. GID steht für Gasinnendruck – dabei formt Gas gezielt Hohlräume im Bauteil. Beides läuft bei uns automatisiert; du richtest die Prozesse ein, überwachst und optimierst sie.</div></details>
       <details><summary>Was bietet ihr außer dem Gehalt?</summary><div class="faq__a">30 Tage Urlaub, flexible Arbeitszeiten, Unterstützung bei VWL und betrieblicher Altersvorsorge, individuelle Weiterbildung, Dienstrad-Leasing, kostenlose Parkplätze direkt am Firmengebäude, Mitarbeiterrabatte und Einkaufsvorteile, regelmäßige Mitarbeiterevents sowie kostenloses Mineralwasser und Obst.</div></details>
       <details><summary>Wie schnell bekomme ich eine Rückmeldung?</summary><div class="faq__a">Wir melden uns persönlich und zeitnah – in der Regel telefonisch für ein kurzes, unkompliziertes Erstgespräch.</div></details>
-      <details><summary>Was genau macht Oberland MV?</summary><div class="faq__a">Wir entwickeln und fertigen in Bad Wurzach seit fast 60 Jahren langlebige Mehrweg-Verpackungen für die europäische Getränkebranche – von der Entwicklung über die Fertigung bis zum Recycling. Ausgezeichnet wurden wir unter anderem mit dem Deutschen Verpackungspreis und dem World Star Packaging Award.</div></details>
+      <details><summary>Was genau macht Oberland MV?</summary><div class="faq__a">Wir sind der führende Hersteller langlebiger Mehrweg-Verpackungen für die europäische Getränkebranche – mit Systemlösungen von der Entwicklung über die Fertigung bis zum Recycling und einem Qualitätsanspruch seit fast 60 Jahren. Ausgezeichnet wurden wir unter anderem mit dem Deutschen Verpackungspreis und dem World Star Packaging Award.</div></details>
       <details><summary>Wer sieht meine Daten?</summary><div class="faq__a">Nur die für das Recruiting zuständigen Personen bei der Oberland M &amp; V GmbH. Deine Daten werden gemäß Art. 6 Abs. 1 lit. a DSGVO ausschließlich zur Bearbeitung deiner Bewerbung verwendet.</div></details>
     </div>
   </div>
@@ -676,8 +742,8 @@ footer{padding:54px 0 36px;background:var(--brand);color:#e4efe8}
     <div class="footer__grid">
       <div class="footer__col footer__brand">
         <img id="logoFooter" alt="Oberland M &amp; V GmbH" />
-        <b>OberlandMV</b><span class="brand__sub" style="display:block;letter-spacing:.15em;text-transform:uppercase;font-weight:600">natürlich geht's</span>
-        <p><strong>Oberland MV – natürlich geht's.</strong><br />Oberland M &amp; V GmbH · Mehrweglösungen für die europäische Getränkebranche – von der Entwicklung bis zum Recycling.</p>
+        <b>OberlandMV</b><span class="brand__sub" style="display:block;letter-spacing:.15em;text-transform:uppercase;font-weight:600">Natürlich geht’s!</span>
+        <p><strong>Oberland MV – Natürlich geht’s!</strong><br />Oberland M &amp; V GmbH · Mehrweglösungen für die europäische Getränkebranche – von der Entwicklung bis zum Recycling.</p>
       </div>
       <div class="footer__col">
         <b>Kontakt</b>
@@ -751,18 +817,20 @@ footer{padding:54px 0 36px;background:var(--brand);color:#e4efe8}
       probe.onerror = tryNext; probe.src = url;
     })();
   }
-  var LOGO = ["bilder/oberlandmv-logo-weiss.svg"];
-  loadLogo(document.getElementById("logoHeader"), LOGO);
-  loadLogo(document.getElementById("logoHero"),   LOGO);
-  loadLogo(document.getElementById("logoFooter"), LOGO);
+  /* Topbar ist weiß -> farbiges Original-Logo (Grün + Silber).
+     Hero und Footer sind grün -> weißes Original-Logo der Website. */
+  loadLogo(document.getElementById("logoHeader"), ["bilder/web/logo-farbig.png","bilder/oberlandmv-logo-farbig.png"]);
+  loadLogo(document.getElementById("logoHero"),   ["bilder/oberlandmv-logo-weiss.svg"]);
+  loadLogo(document.getElementById("logoFooter"), ["bilder/oberlandmv-logo-weiss.svg"]);
 
   /* ---------- Hero-Foto ----------
-     Sobald ein Foto in bilder/ liegt (hero.jpg / .jpeg / .png / .webp),
-     wird es automatisch verwendet. Bis dahin steht das CI-Motiv der
-     Website (dunkles Grün mit Baum-Signet) – nie ein kaputtes Bild. */
+     Waldhaus-Kasten aus dem Bildmaterial (bilder/web/hero-waldhaus.jpg,
+     ohne eingebrannten Claim und ohne Logo, nach links ins Grün
+     verlängert). Fehlt die Datei, steht das CI-Motiv der Website –
+     nie ein kaputtes Bild. */
   (function(){
     var media = document.getElementById("heroMedia");
-    var cands = ["bilder/hero.jpg","bilder/hero.jpeg","bilder/hero.png","bilder/hero.webp"];
+    var cands = ["bilder/web/hero-waldhaus.jpg"];
     function useCi(){
       var p = new Image();
       p.onload = function(){ media.classList.add("is-ci"); media.style.backgroundImage = "url('bilder/ci-hintergrund.jpg')"; };
@@ -771,7 +839,7 @@ footer{padding:54px 0 36px;background:var(--brand);color:#e4efe8}
     (function tryNext(i){
       if (i >= cands.length) { useCi(); return; }
       var probe = new Image();
-      probe.onload  = function(){ media.style.backgroundImage = "url('" + cands[i] + "')"; };
+      probe.onload  = function(){ media.classList.add("is-foto"); media.style.backgroundImage = "url('" + cands[i] + "')"; };
       probe.onerror = function(){ tryNext(i+1); };
       probe.src = cands[i];
     })(0);
