@@ -75,7 +75,7 @@ Vier Fragen, **eine pro Schritt**, danach die Kontaktdaten (5 Schritte).
 
 | # | Frage | Kategorie | Erfüllt bei |
 |---|-------|-----------|-------------|
-| 1 | Ausbildung | **Pflicht** (K.-o.) | Abgeschlossene Ausbildung als Verfahrensmechaniker K&K **und** Fachrichtung Formteile |
+| 1 | Ausbildung | **Pflicht** (K.-o.) | Abgeschlossene Ausbildung als Verfahrensmechaniker für Kunststoff- und Kautschuktechnologie Fachrichtung Formteile |
 | 2 | Deutschkenntnisse | **Pflicht** (K.-o.) | „Muttersprache / sehr gut" oder „Gut" |
 | 3 | Erfahrung in der Fertigung | optional | Kunststoffverarbeitung oder andere Fertigung |
 | 4 | 3-Schicht-Bereitschaft | optional | „Ja, das passt für mich" |
@@ -188,7 +188,7 @@ aus `bilder/`.
 
 | Datei | Ansatz | Format |
 |-------|--------|--------|
-| `oberland-stelle-4x5.png` / `-9x16.png` | Berufsbild direkt, Waldhaus-Kasten auf Grün, „Fachrichtung Formteile" + „Ausbildung vorausgesetzt" | 1080 × 1350 / 1080 × 1920 |
+| `oberland-stelle-4x5.png` / `-9x16.png` | Berufsbild direkt (Beruf + Fachrichtung in einer Zeile), Waldhaus-Kasten auf Grün, „Ausbildung vorausgesetzt" | 1080 × 1350 / 1080 × 1920 |
 | `oberland-check-4x5.png` / `-9x16.png` | Qualifizierer im Kampagnen-Look Silber \| Kasten \| Grün: „Hast du was auf dem Kasten?" + Checkliste | 1080 × 1350 / 1080 × 1920 |
 | `oberland-arbeitgeber-4x5.png` / `-9x16.png` | Benefit voran: „Der Mehrweg für deine Karriere", Produktbild, Siegel Deutscher Verpackungspreis, farbiges Logo | 1080 × 1350 / 1080 × 1920 |
 

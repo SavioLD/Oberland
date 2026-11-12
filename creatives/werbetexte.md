@@ -26,13 +26,13 @@ Das bekommst du bei uns:
 ✓ Strukturierte Einarbeitung und individuelle Weiterbildung
 ✓ Dienstrad-Leasing, kostenlose Parkplätze und Mitarbeiterrabatte
 
-Voraussetzung: abgeschlossene Ausbildung in der Fachrichtung Formteile, gute Deutschkenntnisse und Bereitschaft zum 3-Schicht-System.
+Voraussetzung: abgeschlossene Ausbildung als Verfahrensmechaniker für Kunststoff- und Kautschuktechnologie Fachrichtung Formteile, gute Deutschkenntnisse und Bereitschaft zum 3-Schicht-System.
 
 Bewirb dich in unter 60 Sekunden – ganz ohne Lebenslauf.
 Überschrift:
 30 Tage Urlaub und ein sicherer Job
 Beschreibung:
-Verfahrensmechaniker (m/w/d) · Formteile
+Bad Wurzach · Bewerbung in 60 Sekunden
 
 VARIANTE 2
 Primärtext:
@@ -61,7 +61,7 @@ Als Verfahrensmechaniker (m/w/d) für Kunststoff- und Kautschuktechnologie Fachr
 
 Dazu: 30 Tage Urlaub, attraktive Vergütung, VWL und bAV, Dienstrad-Leasing und regelmäßige Mitarbeiterevents.
 
-Ausbildung in der Fachrichtung Formteile, gute Deutschkenntnisse und Bereitschaft zum 3-Schicht-System setzen wir voraus. Bewerbung in 60 Sekunden, ohne Lebenslauf.
+Eine abgeschlossene Ausbildung als Verfahrensmechaniker für Kunststoff- und Kautschuktechnologie Fachrichtung Formteile, gute Deutschkenntnisse und Bereitschaft zum 3-Schicht-System setzen wir voraus. Bewerbung in 60 Sekunden, ohne Lebenslauf.
 Überschrift:
 Prozesse gestalten statt nur bedienen
 Beschreibung:
