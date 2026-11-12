@@ -21,7 +21,7 @@ Primärtext:
 Oberland MV in Bad Wurzach ist der führende Mehrweg-Verpackungshersteller der europäischen Getränkebranche – ausgezeichnet mit dem Deutschen Verpackungspreis und dem World Star Packaging Award. Für unsere Spritzgussfertigung suchen wir dich als Verfahrensmechaniker (m/w/d) für Kunststoff- und Kautschuktechnologie, Fachrichtung Formteile.
 
 Das bekommst du bei uns:
-✓ 30 Tage Urlaub und flexible Arbeitszeiten
+✓ 30 Tage Urlaub
 ✓ Attraktive Vergütung plus VWL und betriebliche Altersvorsorge
 ✓ Strukturierte Einarbeitung und individuelle Weiterbildung
 ✓ Dienstrad-Leasing, kostenlose Parkplätze und Mitarbeiterrabatte

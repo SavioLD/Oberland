@@ -42,7 +42,7 @@
   "hiringOrganization": { "@type": "Organization", "name": "Oberland M & V GmbH", "sameAs": "https://www.oberlandmv.com/", "logo": "https://saviold.github.io/Oberland/bilder/favicon.png" },
   "jobLocation": { "@type": "Place", "address": { "@type": "PostalAddress", "streetAddress": "Oberriedstraße 7", "addressLocality": "Bad Wurzach", "postalCode": "88410", "addressRegion": "BW", "addressCountry": "DE" } },
   "qualifications": "Abgeschlossene Ausbildung als Verfahrensmechaniker (m/w/d) für Kunststoff- und Kautschuktechnologie, Fachrichtung Formteile. Gute Deutschkenntnisse.",
-  "jobBenefits": "Sicherer Arbeitsplatz, attraktive Vergütung, 30 Tage Urlaub, flexible Arbeitszeiten, Fort- und Weiterbildung, strukturierte Einarbeitung, VWL und bAV, Dienstrad-Leasing, kostenlose Parkplätze, Mitarbeiterrabatte, Mitarbeiterevents",
+  "jobBenefits": "Sicherer Arbeitsplatz, attraktive Vergütung, 30 Tage Urlaub, Fort- und Weiterbildung, strukturierte Einarbeitung, VWL und bAV, Dienstrad-Leasing, kostenlose Parkplätze, Mitarbeiterrabatte, Mitarbeiterevents",
   "directApply": true
 }
 </script>
@@ -201,9 +201,10 @@ section[id],.form-card{scroll-margin-top:84px}
 
 /* ---------- benefits ---------- */
 .about{display:grid;grid-template-columns:1.08fr .92fr;gap:48px;align-items:center}
-.about__text p.about__lead{margin-top:18px;font-size:19px;line-height:1.6;color:var(--ink)}
-.about__text p.about__lead b{color:var(--brand)}
-.about__text p.about__more{margin-top:14px;font-size:16px;color:var(--ink-soft)}
+/* Fließtext "Das sind wir": Arial 11 pt, normal (Kundenvorgabe laut Styleguide) */
+.about__text p.about__lead,.about__text p.about__more{font-family:Arial,"Liberation Sans",Helvetica,sans-serif;font-size:11pt;font-weight:400;line-height:1.6;color:var(--ink)}
+.about__text p.about__lead{margin-top:18px}
+.about__text p.about__more{margin-top:12px}
 .facts{display:grid;grid-template-columns:repeat(3,1fr);gap:0;margin-top:28px;border-top:2px solid var(--brand);border-bottom:1px solid var(--line)}
 .fact{padding:16px 14px 16px 0}
 .fact+.fact{padding-left:16px;border-left:1px solid var(--line)}
@@ -218,7 +219,7 @@ section[id],.form-card{scroll-margin-top:84px}
 .benefits-head h3{font-size:clamp(24px,3vw,32px)}
 .benefits-head p{color:var(--ink-mute);font-size:15px}
 @media(max-width:920px){.about{grid-template-columns:1fr;gap:30px}}
-@media(max-width:760px){.about__text p.about__lead{font-size:17px}.fact b{font-size:21px}.fact span{font-size:12px}.fact{padding-right:8px}.fact+.fact{padding-left:10px}.benefits-head{margin-top:52px}}
+@media(max-width:760px){.fact b{font-size:21px}.fact span{font-size:12px}.fact{padding-right:8px}.fact+.fact{padding-left:10px}.benefits-head{margin-top:52px}}
 .benefit-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:30px}
 @media(max-width:920px){.benefit-grid{grid-template-columns:repeat(2,1fr)}}
 @media(max-width:560px){.benefit-grid{grid-template-columns:1fr}}
@@ -465,7 +466,7 @@ footer{padding:54px 0 36px;background:var(--brand);color:#e4efe8}
     <div class="trust__grid">
       <div class="trust__item"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12a9 9 0 0 1-15.5 6.2"/><path d="M3 12a9 9 0 0 1 15.5-6.2"/><path d="M18.5 2.5v3.7h-3.7"/><path d="M5.5 21.5v-3.7h3.7"/></svg><div><b>Führend im Mehrweg</b><span>Getränkekästen für ganz Europa</span></div></div>
       <div class="trust__item"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10"/><path d="m9 12 2 2 4-4"/></svg><div><b>Sicherer Arbeitsplatz</b><span>in einer zukunftssicheren Branche</span></div></div>
-      <div class="trust__item"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/><path d="m9 16 2 2 4-4"/></svg><div><b>30 Tage Urlaub</b><span>plus flexible Arbeitszeiten</span></div></div>
+      <div class="trust__item"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/><path d="m9 16 2 2 4-4"/></svg><div><b>30 Tage Urlaub</b><span>plus attraktive Vergütung</span></div></div>
       <div class="trust__item"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="6"/><path d="M15.5 13.2 17 22l-5-3-5 3 1.5-8.8"/></svg><div><b>Ausgezeichnet</b><span>Deutscher Verpackungspreis &amp; World Star</span></div></div>
     </div>
   </div>
@@ -507,15 +508,14 @@ footer{padding:54px 0 36px;background:var(--brand);color:#e4efe8}
           <ul>
             <li>Sicherer Arbeitsplatz in einer zukunftssicheren Branche</li>
             <li>Attraktive Vergütung und 30 Tage Urlaub</li>
-            <li>Flexible Arbeitszeiten</li>
             <li>Strukturierte Einarbeitung und persönliche Begleitung</li>
+            <li>Individuelle Fort- und Weiterbildung</li>
           </ul>
         </div>
         <div>
           <h4>Das setzen wir voraus</h4>
           <ul class="job__must">
-            <li>Abgeschlossene Ausbildung als Verfahrensmechaniker (m/w/d) für Kunststoff- und Kautschuktechnologie</li>
-            <li>Fachrichtung Formteile</li>
+            <li>Abgeschlossene Ausbildung als Verfahrensmechaniker (m/w/d) für Kunststoff- und Kautschuktechnologie, Fachrichtung Formteile</li>
             <li>Gute Deutschkenntnisse</li>
           </ul>
           <h4>Das bringst du mit</h4>
@@ -545,7 +545,7 @@ footer{padding:54px 0 36px;background:var(--brand);color:#e4efe8}
       <div class="about__text">
         <span class="kicker">Das sind wir</span>
         <h2 class="sec-title">Oberland MV –<br />Natürlich geht’s!</h2>
-        <p class="about__lead"><b>Innovative und langlebige Mehrweglösungen</b> haben Oberland MV zum <b>führenden Verpackungshersteller in der europaweiten Getränkebranche</b> gemacht. Der Deutsche Verpackungspreis und der World Star Packaging Award zeugen von unserem hohen Qualitätsanspruch – seit fast 60&nbsp;Jahren.</p>
+        <p class="about__lead">Innovative und langlebige Mehrweglösungen haben Oberland MV zum führenden Verpackungshersteller in der europaweiten Getränkebranche gemacht. Der Deutsche Verpackungspreis und der World Star Packaging Award zeugen von unserem hohen Qualitätsanspruch – seit fast 60&nbsp;Jahren.</p>
         <p class="about__more">Unsere Kunden erhalten Systemlösungen von der Entwicklung über die Fertigung bis zum Recycling. Das Engagement unseres offenen und vielfältigen Teams sorgt dafür, dass wir sie auch in Zukunft mit neuartigen Ideen und exzellenten Leistungen begeistern.</p>
         <div class="facts">
           <div class="fact"><b>Fast 60</b><span>Jahre Qualitätsanspruch</span></div>
@@ -728,7 +728,7 @@ footer{padding:54px 0 36px;background:var(--brand);color:#e4efe8}
       <details><summary>Brauche ich einen Lebenslauf?</summary><div class="faq__a">Nein. Für die Bewerbung reichen vier kurze Fragen und deine Kontaktdaten. Es gibt bewusst keinen Datei-Upload – alles Weitere besprechen wir persönlich.</div></details>
       <details><summary>Welche Voraussetzungen muss ich mitbringen?</summary><div class="faq__a">Eine abgeschlossene Ausbildung als Verfahrensmechaniker (m/w/d) für Kunststoff- und Kautschuktechnologie in der Fachrichtung Formteile sowie gute Deutschkenntnisse. Schön ist, wenn du schon Erfahrung in der Fertigung mitbringst – idealerweise in der Kunststoffverarbeitung – und bereit bist, im 3-Schicht-System zu arbeiten.</div></details>
       <details><summary>Was bedeuten IML und GID?</summary><div class="faq__a">IML steht für In-Mould-Labeling: Das Etikett bzw. Dekor wird direkt beim Spritzgießen mit dem Kasten verbunden. GID steht für Gasinnendruck – dabei formt Gas gezielt Hohlräume im Bauteil. Beides läuft bei uns automatisiert; du richtest die Prozesse ein, überwachst und optimierst sie.</div></details>
-      <details><summary>Was bietet ihr außer dem Gehalt?</summary><div class="faq__a">30 Tage Urlaub, flexible Arbeitszeiten, Unterstützung bei VWL und betrieblicher Altersvorsorge, individuelle Weiterbildung, Dienstrad-Leasing, kostenlose Parkplätze direkt am Firmengebäude, Mitarbeiterrabatte und Einkaufsvorteile, regelmäßige Mitarbeiterevents sowie kostenloses Mineralwasser und Obst.</div></details>
+      <details><summary>Was bietet ihr außer dem Gehalt?</summary><div class="faq__a">30 Tage Urlaub, Unterstützung bei VWL und betrieblicher Altersvorsorge, individuelle Weiterbildung, Dienstrad-Leasing, kostenlose Parkplätze direkt am Firmengebäude, Mitarbeiterrabatte und Einkaufsvorteile, regelmäßige Mitarbeiterevents sowie kostenloses Mineralwasser und Obst.</div></details>
       <details><summary>Wie schnell bekomme ich eine Rückmeldung?</summary><div class="faq__a">Wir melden uns persönlich und zeitnah – in der Regel telefonisch für ein kurzes, unkompliziertes Erstgespräch.</div></details>
       <details><summary>Was genau macht Oberland MV?</summary><div class="faq__a">Wir sind der führende Hersteller langlebiger Mehrweg-Verpackungen für die europäische Getränkebranche – mit Systemlösungen von der Entwicklung über die Fertigung bis zum Recycling und einem Qualitätsanspruch seit fast 60 Jahren. Ausgezeichnet wurden wir unter anderem mit dem Deutschen Verpackungspreis und dem World Star Packaging Award.</div></details>
       <details><summary>Wer sieht meine Daten?</summary><div class="faq__a">Nur die für das Recruiting zuständigen Personen bei der Oberland M &amp; V GmbH. Deine Daten werden gemäß Art. 6 Abs. 1 lit. a DSGVO ausschließlich zur Bearbeitung deiner Bewerbung verwendet.</div></details>
