@@ -132,8 +132,7 @@ const MOTIVE = {
     <div class="text">
       <div class="eyebrow"><i></i>Hast du was auf dem Kasten?</div>
       <h1>Verfahrens&shy;mechaniker<br>(m/w/d)</h1>
-      <div class="sub">für Kunststoff- und Kautschuktechnologie</div>
-      <div class="badge">Fachrichtung Formteile</div>
+      <div class="sub">für Kunststoff- und Kautschuktechnologie Fachrichtung Formteile</div>
     </div>
     <div class="unten">
       <div class="chips"><span class="chip">30 Tage Urlaub</span><span class="chip">Sicherer Arbeitsplatz</span><span class="chip">Bad Wurzach</span></div>
@@ -169,9 +168,9 @@ const MOTIVE = {
     <div class="kopf"><span>Wir stellen ein</span><img src="${url(BILD.logoWeiss)}" alt=""></div>
     <h1>Hast du was<br>auf dem Kasten?</h1>
     <div class="karte">
-      <h2>Verfahrensmechaniker (m/w/d)<small>Kunststoff- und Kautschuktechnologie · Bad Wurzach</small></h2>
+      <h2>Verfahrensmechaniker (m/w/d)<small>für Kunststoff- und Kautschuktechnologie Fachrichtung Formteile</small></h2>
       <ul class="liste arial">
-        <li><span class="check">${CHECK}</span>Ausbildung, Fachrichtung Formteile</li>
+        <li><span class="check">${CHECK}</span>Abgeschlossene Ausbildung in diesem Beruf</li>
         <li><span class="check">${CHECK}</span>Spritzguss, Robotik, IML und GID</li>
         <li><span class="check">${CHECK}</span>Bereit für 3-Schicht</li>
       </ul>
@@ -224,7 +223,7 @@ const MOTIVE = {
     </ul>
     <div class="bar">
       <div class="row">
-        <div><b>Verfahrensmechaniker (m/w/d)</b><small>Fachrichtung Formteile · Bad Wurzach</small></div>
+        <div><b>Verfahrensmechaniker (m/w/d)</b><small>für Kunststoff- und Kautschuktechnologie<br>Fachrichtung Formteile</small></div>
         <span class="cta">Jetzt bewerben ${PFEIL}</span>
       </div>
       <div class="claim">Oberland MV – Natürlich geht’s!</div>
