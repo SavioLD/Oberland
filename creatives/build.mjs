@@ -105,7 +105,7 @@ const MOTIVE = {
   stelle(f) {
     const v = f.h > 1500;                       // 9:16
     const T = v ? 250 : 64;                     // oberer Rand
-    const crateTop = v ? 690 : 455, crateW = v ? 1080 : 1000, crateL = v ? 0 : 40;
+    const crateTop = v ? 745 : 505, crateW = v ? 1080 : 1000, crateL = v ? 0 : 40;
     const ctaTop = v ? 1405 : 1088;
     return `<style>
       body{width:${f.w}px;height:${f.h}px;background:linear-gradient(180deg,${CI.waldTop} 0%,${CI.waldMitte} 55%,${CI.waldUnten} 100%)}
@@ -115,8 +115,7 @@ const MOTIVE = {
       .text{position:absolute;left:72px;right:60px;top:${T + (v ? 170 : 140)}px}
       .eyebrow{display:flex;align-items:center;gap:14px;font-weight:800;font-size:30px;letter-spacing:.08em;text-transform:uppercase;color:${CI.silberHell}}
       .eyebrow i{width:14px;height:14px;border-radius:50%;background:${CI.silberHell};box-shadow:0 0 0 6px rgba(201,203,204,.25)}
-      h1{margin-top:20px;font-weight:800;font-size:${v ? 84 : 78}px;line-height:1.02;letter-spacing:-.01em}
-      .sub{margin-top:14px;font-weight:600;font-size:${v ? 42 : 38}px;line-height:1.15;color:#e8efea}
+      h1{margin-top:20px;font-weight:800;font-size:${v ? 62 : 56}px;line-height:1.06;letter-spacing:-.01em}
       .badge{display:inline-block;margin-top:20px;background:#fff;color:${CI.gruen};font-weight:800;font-size:27px;letter-spacing:.07em;text-transform:uppercase;padding:10px 20px;border-radius:0 16px 0 16px}
       .schleier{position:absolute;left:0;right:0;bottom:0;height:${v ? 760 : 470}px;background:linear-gradient(180deg,rgba(3,54,28,0) 0%,rgba(3,54,28,.82) 38%,rgba(3,45,23,.96) 100%)}
       .unten{position:absolute;left:72px;right:72px;top:${ctaTop}px}
@@ -131,8 +130,7 @@ const MOTIVE = {
     <div class="kopf"><img src="${url(BILD.logoWeiss)}" alt=""><span class="pill">Wir stellen ein</span></div>
     <div class="text">
       <div class="eyebrow"><i></i>Hast du was auf dem Kasten?</div>
-      <h1>Verfahrens&shy;mechaniker<br>(m/w/d)</h1>
-      <div class="sub">für Kunststoff- und Kautschuktechnologie Fachrichtung Formteile</div>
+      <h1>Verfahrensmechaniker (m/w/d) für Kunststoff- und Kautschuktechnologie Fachrichtung Formteile</h1>
     </div>
     <div class="unten">
       <div class="chips"><span class="chip">30 Tage Urlaub</span><span class="chip">Sicherer Arbeitsplatz</span><span class="chip">Bad Wurzach</span></div>
@@ -154,8 +152,7 @@ const MOTIVE = {
       .kopf img{height:84px;width:auto}
       h1{position:absolute;left:0;right:0;top:${T + (v ? 120 : 96)}px;text-align:center;font-weight:800;font-size:${v ? 90 : 82}px;line-height:1.02;text-transform:uppercase;letter-spacing:.005em;text-shadow:0 3px 24px rgba(0,0,0,.18)}
       .karte{position:absolute;left:56px;right:56px;top:${cardTop}px;background:#fff;color:${CI.schwarz};border-radius:0 44px 0 44px;padding:36px 46px 36px;box-shadow:0 24px 60px rgba(0,0,0,.28)}
-      .karte h2{font-weight:800;font-size:40px;line-height:1.1;color:${CI.gruen}}
-      .karte h2 small{display:block;font-weight:600;font-size:25px;color:${CI.silber};margin-top:6px;letter-spacing:.02em}
+      .karte h2{font-weight:800;font-size:31px;line-height:1.15;color:${CI.gruen}}
       .liste{list-style:none;margin-top:24px;display:grid;gap:16px}
       .liste li{display:flex;align-items:center;gap:18px;font-size:29px;font-weight:700;line-height:1.25}
       .liste .check{width:44px;height:44px}.liste .check svg{width:24px;height:24px}
@@ -168,7 +165,7 @@ const MOTIVE = {
     <div class="kopf"><span>Wir stellen ein</span><img src="${url(BILD.logoWeiss)}" alt=""></div>
     <h1>Hast du was<br>auf dem Kasten?</h1>
     <div class="karte">
-      <h2>Verfahrensmechaniker (m/w/d)<small>für Kunststoff- und Kautschuktechnologie Fachrichtung Formteile</small></h2>
+      <h2>Verfahrensmechaniker (m/w/d) für Kunststoff- und Kautschuktechnologie Fachrichtung Formteile</h2>
       <ul class="liste arial">
         <li><span class="check">${CHECK}</span>Abgeschlossene Ausbildung in diesem Beruf</li>
         <li><span class="check">${CHECK}</span>Spritzguss, Robotik, IML und GID</li>
@@ -201,7 +198,7 @@ const MOTIVE = {
       .liste .check{width:40px;height:40px}.liste .check svg{width:22px;height:22px}
       .bar{position:absolute;left:0;right:0;top:${barTop}px;bottom:0;background:${CI.gruen};color:#fff;padding:${v ? 46 : 38}px 66px}
       .bar .row{display:flex;align-items:center;justify-content:space-between;gap:24px}
-      .bar b{display:block;font-weight:800;font-size:37px;line-height:1.1}
+      .bar b{display:block;font-weight:800;font-size:30px;line-height:1.15}
       .bar small{display:block;margin-top:6px;font-weight:600;font-size:25px;color:${CI.silberHell}}
       .cta{display:inline-flex;align-items:center;gap:14px;background:#fff;color:${CI.gruen};font-weight:800;font-size:31px;padding:20px 32px;border-radius:999px;white-space:nowrap}
       .cta svg{width:30px;height:30px}
@@ -223,7 +220,7 @@ const MOTIVE = {
     </ul>
     <div class="bar">
       <div class="row">
-        <div><b>Verfahrensmechaniker (m/w/d)</b><small>für Kunststoff- und Kautschuktechnologie<br>Fachrichtung Formteile</small></div>
+        <div><b>Verfahrensmechaniker (m/w/d) für Kunststoff- und Kautschuktechnologie Fachrichtung Formteile</b><small>Bad Wurzach</small></div>
         <span class="cta">Jetzt bewerben ${PFEIL}</span>
       </div>
       <div class="claim">Oberland MV – Natürlich geht’s!</div>
